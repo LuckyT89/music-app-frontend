@@ -26,10 +26,29 @@ function SongPage() {
     const songList = songs.map(song => <SongRow key={song.id} song={song} /> )
 
 
+    function addSong(song) {
+        window.alert('button clicked');
+        song.album_id = albumId;
+        console.log(song);
+
+        const config = {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(song)
+          };
+      
+          fetch(`${baseURL}/songs`, config)
+            .then(res => res.json())
+            .then(song => setSongs([...songs, song]));
+    }
+
+
     return (
         <div>
             Song page
-            <FormAdd />
+            <FormAdd addSong={addSong} />
             <FormEdit />
             <FormDelete />
             <table>
