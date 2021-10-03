@@ -1,9 +1,26 @@
+import { useState } from 'react';
+
+function FormDelete({ songOptions, deleteSong }) {
+
+    const [songId, setSongId] = useState(0)
+
+    function handleSongChange(e) {
+        setSongId(e.target.value)
+    }
+    function handleButtonClick() {
+        const songIdInteger = parseInt(songId); // songId is getting set as a string for some reason
+        deleteSong(songIdInteger);
+    }
 
 
-function FormDelete() {
+
     return (
         <div>
-            Delete song form
+            Delete song form<br />
+            <select onChange={handleSongChange}>
+                { songOptions }
+            </select>
+            <button onClick={handleButtonClick}>Delete</button>
         </div>
     );
 }
