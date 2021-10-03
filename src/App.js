@@ -2,6 +2,7 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import ArtistsPage from './components/ArtistsPage';
 import AlbumsPage from './components/AlbumsPage';
+import SongPage from './components/SongPage';
 
 function App() {
   return (
@@ -13,8 +14,12 @@ function App() {
           <ArtistsPage />
         </Route>
 
-        <Route>
-          <AlbumsPage path="/artists/:id/albums" />
+        <Route path="/artists/:id/albums">
+          <AlbumsPage />
+        </Route>
+
+        <Route path="/albums/:id/songs">
+          <SongPage />
         </Route>
       </Switch>
     </div>

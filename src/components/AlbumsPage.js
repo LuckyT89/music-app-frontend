@@ -17,14 +17,14 @@ function AlbumsPage() {
         .then(res => res.json())
         .then(albums => {
             setAlbums(albums);
-            console.log(albums)
         })
-    }, []);
+    }, [artistId]); // console warning wants artistId in the dependency array even though it works without it
 
     const albumCards = albums.map((album) => <AlbumCard key={album.id} album={album} />);
 
     return (
         <div>
+            Albums Page
             { albumCards }
         </div>
     );
