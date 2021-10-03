@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import FormAdd from "./FormAdd";
+import FormDelete from "./FormDelete";
+import FormEdit from "./FormEdit";
 import SongRow from './SongRow';
 
 function SongPage() {
@@ -15,7 +18,6 @@ function SongPage() {
         fetch(`${baseURL}/albums/${albumId}/songs`)
         .then(res => res.json())
         .then(songs => {
-            console.log(songs);
             setSongs(songs);
         })
     }, [albumId]); // console warning wants albumId in the dependency array even though it works without it
@@ -27,6 +29,9 @@ function SongPage() {
     return (
         <div>
             Song page
+            <FormAdd />
+            <FormEdit />
+            <FormDelete />
             <table>
                 <thead>
                     <tr>
