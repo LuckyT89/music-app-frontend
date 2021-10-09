@@ -24,7 +24,6 @@ function AlbumsPage() {
 
     return (
         <div>
-            Albums Page
             { albumCards }
         </div>
     );

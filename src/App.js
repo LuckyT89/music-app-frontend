@@ -7,6 +7,10 @@ import SongPage from './components/SongPage';
 function App() {
   return (
     <div className="App">
+      <div className="header">
+        <h1>Music Space</h1>
+      </div>
+
       <Switch>
         <Route exact path="/">
           <ArtistsPage />

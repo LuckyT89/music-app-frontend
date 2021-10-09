@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
+import '../styles/AlbumCard.css';
 
 
 function AlbumCard({ album }) {
     return (
-        <div>
+        <div className="album-card">
             <Link to={`/albums/${album.id}/songs`} >
                 <img src={album.image_url} />
                 <h2>{album.name}</h2>

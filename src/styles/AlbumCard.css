@@ -1,17 +1,15 @@
-.artist-card img {
-    width: 20em;
-    height: 20em;
-    border-radius: 10em;
-    object-fit: cover;
+.album-card img {
+    width: 17em;
+    height: 17em;
 }
 
-div.artist-card {
+div.album-card {
     width: 30em;
     margin: 3em auto;
     padding: 2em;
 }
 
-div.artist-card a {
+div.album-card a {
     color: black;
     text-decoration: none;
     font-family: 'Lobster', cursive;

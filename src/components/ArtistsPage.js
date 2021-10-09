@@ -20,11 +20,7 @@ function ArtistsPage() {
     const artistCards = artists.map((artist) => <ArtistCard key={artist.id} artist={artist} />);
 
     return (
-        <div>
-            <div className="header">
-                <h1>Music Space</h1>
-            </div>
-
+        <div className='artist-page'>
             { artistCards }
         </div>
     );
