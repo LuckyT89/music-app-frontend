@@ -1,0 +1,6 @@
+.artist-card img {
+    width: 20em;
+    height: 20em;
+    border-radius: 10em;
+    object-fit: cover;
+}
