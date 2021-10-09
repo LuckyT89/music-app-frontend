@@ -28,10 +28,10 @@ function FormAdd({ addSong }) {
 
     return (
         <div>
-            Add song form<br />
-            <input type='text' placeholder='Track' onChange={handleTrackChange} />
-            <input type='text' placeholder='Title' onChange={handleTitleChange} />
-            <input type='text' placeholder='Length' onChange={handleLengthChange} />
+            Add a song to this album<br />
+            <input className="m-3 p-2" type='text' placeholder='Track #' onChange={handleTrackChange} />
+            <input className="m-3 p-2" type='text' placeholder='Title' onChange={handleTitleChange} />
+            <input className="m-3 p-2" type='text' placeholder='Length' onChange={handleLengthChange} /><br />
             <button type="button" className="btn btn-primary" onClick={handleAddClick}>Add</button>
         </div>
     );

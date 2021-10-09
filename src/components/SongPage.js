@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import FormAdd from "./FormAdd";
-import FormDelete from "./FormDelete";
-import FormEdit from "./FormEdit";
+import FormRemove from "./FormRemove";
+import FormUpdate from "./FormUpdate";
 import SongOption from "./SongOption";
 import SongRow from './SongRow';
+import '../styles/SongPage.css';
 
 function SongPage() {
 
@@ -105,10 +106,42 @@ function SongPage() {
 
     return (
         <div>
-            Song page
-            <FormAdd addSong={addSong} />
-            <FormEdit songOptions={songOptions} updateSong={updateSong} />
-            <FormDelete songOptions={songOptions} deleteSong={deleteSong} />
+
+            <div class="accordion" id="accordionExample">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Edit Songs
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Add</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Update</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Remove</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><FormAdd addSong={addSong} /></div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><FormUpdate songOptions={songOptions} updateSong={updateSong} /></div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><FormRemove songOptions={songOptions} deleteSong={deleteSong} /></div>
+                  </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+
             <table>
                 <thead>
                     <tr>
@@ -121,6 +154,7 @@ function SongPage() {
                     { songList }
                 </tbody>
             </table>
+
         </div>
     );
 }

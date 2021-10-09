@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function FormEdit({ songOptions, updateSong }) {
+function FormUpdate({ songOptions, updateSong }) {
 
     const [songId, setSongId] = useState(0)
     const [track, setTrack] = useState(0);
@@ -37,16 +37,16 @@ function FormEdit({ songOptions, updateSong }) {
 
     return (
         <div>
-            Update song form<br />
-            <select onChange={handleSongChange}>
+            Update the values of a song from this album<br />
+            <select className="m-3 p-2" onChange={handleSongChange}>
                 { songOptions }
-            </select><br />
-            <input type='text' placeholder='Track' onChange={handleTrackChange} />
-            <input type='text' placeholder='Title' onChange={handleTitleChange} />
-            <input type='text' placeholder='Length' onChange={handleLengthChange} />
+            </select>
+            <input className="m-3 p-2" type='text' placeholder='Track' onChange={handleTrackChange} />
+            <input className="m-3 p-2" type='text' placeholder='Title' onChange={handleTitleChange} />
+            <input className="m-3 p-2" type='text' placeholder='Length' onChange={handleLengthChange} /><br />
             <button type="button" className="btn btn-secondary" onClick={handleButtonClick}>Update</button>
         </div>
     );
 }
 
-export default FormEdit;
+export default FormUpdate;

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function FormDelete({ songOptions, deleteSong }) {
+function FormRemove({ songOptions, deleteSong }) {
 
     const [songId, setSongId] = useState(0)
 
@@ -16,13 +16,13 @@ function FormDelete({ songOptions, deleteSong }) {
 
     return (
         <div>
-            Delete song form<br />
-            <select onChange={handleSongChange}>
+            Select a song to remove from this album<br />
+            <select className="m-3 p-2" onChange={handleSongChange}>
                 { songOptions }
-            </select>
-            <button type="button" className="btn btn-danger" onClick={handleButtonClick}>Delete</button>
+            </select><br />
+            <button type="button" className="btn btn-danger" onClick={handleButtonClick}>Remove</button>
         </div>
     );
 }
 
-export default FormDelete;
+export default FormRemove;
