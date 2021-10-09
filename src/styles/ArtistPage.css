@@ -1,0 +1,14 @@
+div.header {
+    width: 100vw;
+    height: 30vh;
+    overflow: hidden;
+    background-image: url("https://images.pexels.com/photos/1389429/pexels-photo-1389429.jpeg?cs=srgb&dl=pexels-elviss-railijs-bit%C4%81ns-1389429.jpg&fm=jpg");
+    background-size: cover;
+}
+
+div.header > h1 {
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-size: 6em;
+    line-height: 2.5em;
+}

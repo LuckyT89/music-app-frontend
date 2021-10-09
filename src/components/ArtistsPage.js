@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import ArtistCard from './ArtistCard';
+import '../styles/ArtistPage.css';
 
 function ArtistsPage() {
 
@@ -20,7 +21,10 @@ function ArtistsPage() {
 
     return (
         <div>
-            Artists Page
+            <div className="header">
+                <h1>Music Space</h1>
+            </div>
+
             { artistCards }
         </div>
     );

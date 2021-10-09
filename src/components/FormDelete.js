@@ -20,7 +20,7 @@ function FormDelete({ songOptions, deleteSong }) {
             <select onChange={handleSongChange}>
                 { songOptions }
             </select>
-            <button onClick={handleButtonClick}>Delete</button>
+            <button type="button" className="btn btn-danger" onClick={handleButtonClick}>Delete</button>
         </div>
     );
 }

@@ -32,7 +32,7 @@ function FormAdd({ addSong }) {
             <input type='text' placeholder='Track' onChange={handleTrackChange} />
             <input type='text' placeholder='Title' onChange={handleTitleChange} />
             <input type='text' placeholder='Length' onChange={handleLengthChange} />
-            <button onClick={handleAddClick}>Add</button>
+            <button type="button" className="btn btn-primary" onClick={handleAddClick}>Add</button>
         </div>
     );
 }

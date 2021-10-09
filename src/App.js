@@ -7,8 +7,6 @@ import SongPage from './components/SongPage';
 function App() {
   return (
     <div className="App">
-      App component
-
       <Switch>
         <Route exact path="/">
           <ArtistsPage />
