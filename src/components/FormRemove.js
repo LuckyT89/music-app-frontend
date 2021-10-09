@@ -16,11 +16,11 @@ function FormRemove({ songOptions, deleteSong }) {
 
     return (
         <div>
-            Select a song to remove from this album<br />
-            <select className="m-3 p-2" onChange={handleSongChange}>
+            <p className="mt-2"> Select a song to remove from this album</p>
+            <select className="p-2" onChange={handleSongChange}>
                 { songOptions }
             </select><br />
-            <button type="button" className="btn btn-danger" onClick={handleButtonClick}>Remove</button>
+            <button type="button" className="mt-3 btn btn-danger" onClick={handleButtonClick}>Remove</button>
         </div>
     );
 }

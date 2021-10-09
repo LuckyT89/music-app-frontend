@@ -6,7 +6,7 @@ function AlbumCard({ album }) {
     return (
         <div className="album-card">
             <Link to={`/albums/${album.id}/songs`} >
-                <img src={album.image_url} />
+                <img src={album.image_url} alt="album cover" />
                 <h2>{album.name}</h2>
             </Link>
         </div>

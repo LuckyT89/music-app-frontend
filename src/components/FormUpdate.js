@@ -37,14 +37,14 @@ function FormUpdate({ songOptions, updateSong }) {
 
     return (
         <div>
-            Update the values of a song from this album<br />
-            <select className="m-3 p-2" onChange={handleSongChange}>
+            <p className="mt-2"> Update the values of a song from this album</p>
+            <select className="mx-3 p-2" onChange={handleSongChange}>
                 { songOptions }
             </select>
-            <input className="m-3 p-2" type='text' placeholder='Track' onChange={handleTrackChange} />
-            <input className="m-3 p-2" type='text' placeholder='Title' onChange={handleTitleChange} />
-            <input className="m-3 p-2" type='text' placeholder='Length' onChange={handleLengthChange} /><br />
-            <button type="button" className="btn btn-secondary" onClick={handleButtonClick}>Update</button>
+            <input className="mx-3 p-2" type='text' placeholder='Track' onChange={handleTrackChange} />
+            <input className="mx-3 p-2" type='text' placeholder='Title' onChange={handleTitleChange} />
+            <input className="mx-3 p-2" type='text' placeholder='Length' onChange={handleLengthChange} /><br />
+            <button type="button" className="mt-3 btn btn-secondary" onClick={handleButtonClick}>Update</button>
         </div>
     );
 }
