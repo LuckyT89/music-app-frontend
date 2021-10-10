@@ -70,13 +70,9 @@ function SongPage() {
 
     // Update song
     function updateSong(updatedSong, songId) {
-        console.log('Update song', updatedSong);
-        console.log('Song id: ', songId)
-        console.log('Album id: ', albumId);
 
         const albumIdInteger = parseInt(albumId);
         updatedSong.album_id = albumIdInteger;
-        console.log(updatedSong);
 
         const config = {
             method: 'PATCH',

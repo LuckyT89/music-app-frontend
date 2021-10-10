@@ -9,11 +9,9 @@ function FormUpdate({ songOptions, updateSong }) {
 
     function handleSongChange(e) {
         setSongId(e.target.value)
-        console.log(`Song id: ${e.target.value}`);
     }
     function handleTrackChange(e) {
         setTrack(e.target.value);
-        console.log(track);
     }
     function handleTitleChange(e) {
         setTitle(e.target.value);
@@ -30,6 +28,14 @@ function FormUpdate({ songOptions, updateSong }) {
             track_number: updatedTrackNumber
         }
 
+        // Clear inputs after Update button is clicked
+        document.getElementById('track-update').value = '';
+        document.getElementById('title-update').value = '';
+        document.getElementById('length-update').value = '';
+        setTrack(0);
+        setTitle('');
+        setLength('');
+
         updateSong(updatedSong, songId);
     }
 
@@ -41,9 +47,9 @@ function FormUpdate({ songOptions, updateSong }) {
             <select className="mx-3 p-2" onChange={handleSongChange}>
                 { songOptions }
             </select>
-            <input className="mx-3 p-2" type='text' placeholder='Track' onChange={handleTrackChange} />
-            <input className="mx-3 p-2" type='text' placeholder='Title' onChange={handleTitleChange} />
-            <input className="mx-3 p-2" type='text' placeholder='Length' onChange={handleLengthChange} /><br />
+            <input id="track-update" className="mx-3 p-2" type='text' placeholder='Track' onChange={handleTrackChange} />
+            <input id="title-update" className="mx-3 p-2" type='text' placeholder='Title' onChange={handleTitleChange} />
+            <input id="length-update" className="mx-3 p-2" type='text' placeholder='Length' onChange={handleLengthChange} /><br />
             <button type="button" className="mt-3 btn btn-secondary" onClick={handleButtonClick}>Update</button>
         </div>
     );
