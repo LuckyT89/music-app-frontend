@@ -20,8 +20,10 @@ function ArtistsPage() {
     const artistCards = artists.map((artist) => <ArtistCard key={artist.id} artist={artist} />);
 
     return (
-        <div className='artist-page'>
-            { artistCards }
+        <div className='artist-page container'>
+            <div className="row">
+                { artistCards }
+            </div>
         </div>
     );
 }

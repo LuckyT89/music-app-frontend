@@ -23,8 +23,10 @@ function AlbumsPage() {
     const albumCards = albums.map((album) => <AlbumCard key={album.id} album={album} />);
 
     return (
-        <div>
-            { albumCards }
+        <div className="container">
+            <div className="row">
+                { albumCards }
+            </div>
         </div>
     );
 }
