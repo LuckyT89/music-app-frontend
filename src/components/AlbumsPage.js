@@ -8,7 +8,8 @@ function AlbumsPage() {
     const pathName = window.location.pathname;
     const artistId = pathName.split('/')[2];
 
-    const baseURL = 'http://127.0.0.1:3000';
+    // const baseURL = 'http://127.0.0.1:3000';
+    const baseURL = 'https://music-project-backend.herokuapp.com';
 
     const [albums, setAlbums] = useState([]);
 

@@ -12,7 +12,8 @@ function SongPage() {
     const pathName = window.location.pathname;
     const albumId = pathName.split('/')[2];
 
-    const baseURL = 'http://127.0.0.1:3000';
+    // const baseURL = 'http://127.0.0.1:3000';
+    const baseURL = 'https://music-project-backend.herokuapp.com';
 
     const [songs, setSongs] = useState([]);
 
